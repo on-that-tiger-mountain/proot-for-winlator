@@ -11,6 +11,7 @@ git clone https://github.com/termux/proot.git
 pkg install build-essential libtalloc binutils -y
 
 cd ~/proot/src
+
 make proot
 
 Okay!proot,loader,loader-m32 is need.
