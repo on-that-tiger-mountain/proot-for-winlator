@@ -16,11 +16,11 @@ make proot
 
 Okay!proot,loader,loader-m32 is need.
 
-rename proot to libproot.so
+rename ~/proot/src/proot to libproot.so
 
-rename loader to libproot-loader.so
+rename ~/proot/src/loader/loader to libproot-loader.so
 
-rename loader-m32 to libproot-loader32.so
+rename ~/proot/src/loader/loader-m32 to libproot-loader32.so
 
 take libtalloc.so from termux's libtalloc deb package directly.
 
