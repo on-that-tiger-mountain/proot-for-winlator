@@ -41,6 +41,10 @@ The bug "can not launch container." is fixed.
 
 Now,some phone like xiaomi 14 ultra can use winlator.
 
+other details:
+
+https://github.com/tiger-mountain/pure-64bit-winlator.
+
 proot
 =====
 [![Travis build status](https://travis-ci.org/termux/proot.svg?branch=master)](https://travis-ci.org/termux/proot)
