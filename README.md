@@ -24,7 +24,7 @@ rename ~/proot/src/loader/loader-m32 to libproot-loader32.so
 
 take libtalloc.so from termux's libtalloc deb package directly.
 
-libproot.so,libproot-loader.so,libproot-loader32.so,libtalloc.so is really.
+libproot.so,libproot-loader.so,libproot-loader32.so,libtalloc.so is ready.
 And then ,modify the winlator.
 
 Tips:
