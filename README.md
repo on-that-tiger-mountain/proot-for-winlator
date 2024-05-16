@@ -16,20 +16,25 @@ make proot
 
 Okay!proot,loader,loader-m32 is need.
 
-rename ~/proot/src/proot to libproot.so
+delete libproot.so libproot-loader.so libproot-loader32.so in lib/arm64-v8a directory.
 
-rename ~/proot/src/loader/loader to libproot-loader.so
+move ~/proot/src/proot to lib/arm64-v8a/proot
 
-rename ~/proot/src/loader/loader-m32 to libproot-loader32.so
+move ~/proot/src/loader/loader to lib/arm64-v8a/loader
 
-take libtalloc.so from termux's libtalloc deb package directly.
+move ~/proot/src/loader/loader-m32 to lib/arm64-v8a/loader-m32
 
-libproot.so,libproot-loader.so,libproot-loader32.so,libtalloc.so is ready.
-And then ,modify the winlator.
+take libtalloc.so.2 from termux's libtalloc deb package directly.
+
+move libtalloc.so.2 to lib/arm64-v8a/libtalloc.so.2
+
+proot,loader,loader-m32,libtalloc.so.2 is ready.
+
+And then ,modify GuestProgramLauncherComponent.smali.
 
 Tips:
 
-termux's proot need libtalloc.so to launch. 
+termux's proot need libtalloc.so.2 to launch. 
 
 The default path is /data/data/com.termux/files/usr/lib.
 
