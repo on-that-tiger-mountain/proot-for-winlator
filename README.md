@@ -23,6 +23,7 @@ take libtalloc.so.2 from termux's libtalloc deb package directly.
 use "tar -I zstd -cvf" to compress "proot,loader,loader-m32,libtalloc.so.2" into proot-64.tzst
 
 And then ,modify GuestProgramLauncherComponent.java:
+
     private int execGuestProgram() {
         Context context = environment.getContext();
         ImageFs imageFs = environment.getImageFs();
@@ -85,7 +86,12 @@ And then ,modify GuestProgramLauncherComponent.java:
         });
     }
 
-XServerDisplayActivity.java
+XServerDisplayActivity.java:
+
+TarCompressorUtils.extract(TarCompressorUtils.Type.ZSTD, this, "pulseaudio.tzst", new File(getFilesDir(), "pulseaudio"));
+
+TarCompressorUtils.extract(TarCompressorUtils.Type.ZSTD, this, "proot-64.tzst", new File(getFilesDir(), "proot-android"));
+
 Tips:
 
 termux's proot need libtalloc.so.2 to launch. 
@@ -102,7 +108,9 @@ Now,some phone like xiaomi 14 ultra can use winlator.
 
 other details:
 
-https://github.com/tiger-mountain/pure-64bit-winlator.
+https://github.com/on-that-tiger-mountain/pure-64bit-winlator-app
+
+https://github.com/on-that-tiger-mountain/pure-64bit-winlator
 
 proot
 =====
