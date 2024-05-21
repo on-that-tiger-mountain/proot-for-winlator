@@ -18,20 +18,13 @@ Okay!proot,loader,loader-m32 is need.
 
 delete libproot.so libproot-loader.so libproot-loader32.so in lib/arm64-v8a directory.
 
-move ~/proot/src/proot to lib/arm64-v8a/proot
-
-move ~/proot/src/loader/loader to lib/arm64-v8a/loader
-
-move ~/proot/src/loader/loader-m32 to lib/arm64-v8a/loader-m32
-
 take libtalloc.so.2 from termux's libtalloc deb package directly.
 
-move libtalloc.so.2 to lib/arm64-v8a/libtalloc.so.2
+use "tar -I zstd -cvf" to compress "proot,loader,loader-m32,libtalloc.so.2" into proot-64.tzst
 
-proot,loader,loader-m32,libtalloc.so.2 is ready.
+And then ,modify GuestProgramLauncherComponent.java
 
-And then ,modify GuestProgramLauncherComponent.smali.
-
+XServerDisplayActivity.java
 Tips:
 
 termux's proot need libtalloc.so.2 to launch. 
