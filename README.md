@@ -22,9 +22,12 @@ take libtalloc.so.2 from termux's libtalloc deb package directly.
 
 use "tar -I zstd -cvf" to compress "proot,loader,loader-m32,libtalloc.so.2" into proot-64.tzst
 
+place proot-64.tzst into assets directory。
+
 And then ,modify GuestProgramLauncherComponent.java:
 
 change1:
+
     private int execGuestProgram() {
         Context context = environment.getContext();
         ImageFs imageFs = environment.getImageFs();
@@ -32,9 +35,11 @@ change1:
         File rootDir = imageFs.getRootDir();
 
 change2:
+
         String command = prootDir+"/proot";
 
 change3:
+
         envVars.put("PROOT_TMP_DIR", tmpDir);
         envVars.put("LD_LIBRARY_PATH", prootDir+"/");
         envVars.put("PROOT_LOADER", prootDir+"/loader");
