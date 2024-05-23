@@ -46,9 +46,9 @@ change3:
         envVars.put("PROOT_LOADER_32", prootDir+"/loader-m32");
 ```
 ImageFsInstaller.java:
-```
-change1:
 
+change1:
+```
         final File rootDir = imageFs.getRootDir();
         final File prootDir = new File(activity.getFilesDir(), "proot-android");
 ```
