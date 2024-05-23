@@ -53,9 +53,6 @@ change1:
         final File prootDir = new File(activity.getFilesDir(), "proot-android");
 
 change2:
-                resetContainerImgVersions(activity);
-
-TarCompressorUtils.extract(TarCompressorUtils.Type.ZSTD, activity, "proot-64.tzst", prootDir);
 
 Tips:
 
