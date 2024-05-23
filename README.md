@@ -47,9 +47,12 @@ change3:
 
 XServerDisplayActivity.java:
 
-TarCompressorUtils.extract(TarCompressorUtils.Type.ZSTD, this, "pulseaudio.tzst", new File(getFilesDir(), "pulseaudio"));
+            if (success) {
+                imageFs.createImgVersionFile(LATEST_VERSION);
+                resetContainerImgVersions(activity);
 
-TarCompressorUtils.extract(TarCompressorUtils.Type.ZSTD, this, "proot-64.tzst", new File(getFilesDir(), "proot-android"));
+TarCompressorUtils.extract(TarCompressorUtils.Type.ZSTD, activity, "proot-64.tzst", prootDir);
+            }
 
 Tips:
 
