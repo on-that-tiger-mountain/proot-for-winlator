@@ -37,15 +37,15 @@ change1:
 change2:
 ```
         String command = prootDir+"/proot";
-
+```
 change3:
-
+```
         envVars.put("PROOT_TMP_DIR", tmpDir);
         envVars.put("LD_LIBRARY_PATH", prootDir+"/");
         envVars.put("PROOT_LOADER", prootDir+"/loader");
         envVars.put("PROOT_LOADER_32", prootDir+"/loader-m32");
 ```
-XServerDisplayActivity.java:
+ImageFsInstaller.java:
 ```
 change1:
 
