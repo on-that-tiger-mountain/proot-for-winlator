@@ -27,15 +27,15 @@ place proot-64.tzst into assets directory。
 And then ,modify GuestProgramLauncherComponent.java:
 
 change1:
-
+```
     private int execGuestProgram() {
         Context context = environment.getContext();
         ImageFs imageFs = environment.getImageFs();
         File prootDir = new File(context.getFilesDir(), "proot-android");
         File rootDir = imageFs.getRootDir();
-
+```
 change2:
-
+```
         String command = prootDir+"/proot";
 
 change3:
@@ -46,7 +46,7 @@ change3:
         envVars.put("PROOT_LOADER_32", prootDir+"/loader-m32");
 
 XServerDisplayActivity.java:
-
+```
 change1:
 
         final File rootDir = imageFs.getRootDir();
