@@ -44,24 +44,23 @@ change3:
         envVars.put("LD_LIBRARY_PATH", prootDir+"/");
         envVars.put("PROOT_LOADER", prootDir+"/loader");
         envVars.put("PROOT_LOADER_32", prootDir+"/loader-m32");
-
+```
 XServerDisplayActivity.java:
 ```
 change1:
 
         final File rootDir = imageFs.getRootDir();
         final File prootDir = new File(activity.getFilesDir(), "proot-android");
-
+```
 change2:
-
+```
             if (success) {
                 imageFs.createImgVersionFile(LATEST_VERSION);
                 resetContainerImgVersions(activity);
 
 TarCompressorUtils.extract(TarCompressorUtils.Type.ZSTD, activity, "proot-64.tzst", prootDir);
             }
-            else AppUtils.showToast(activity, R.string.unable_to_install_system_files);
-
+```
 Tips:
 
 termux's proot need libtalloc.so.2 to launch. 
