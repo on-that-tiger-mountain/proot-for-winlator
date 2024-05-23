@@ -54,6 +54,14 @@ change1:
 
 change2:
 
+            if (success) {
+                imageFs.createImgVersionFile(LATEST_VERSION);
+                resetContainerImgVersions(activity);
+
+TarCompressorUtils.extract(TarCompressorUtils.Type.ZSTD, activity, "proot-64.tzst", prootDir);
+            }
+            else AppUtils.showToast(activity, R.string.unable_to_install_system_files);
+
 Tips:
 
 termux's proot need libtalloc.so.2 to launch. 
