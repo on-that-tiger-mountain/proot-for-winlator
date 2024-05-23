@@ -47,6 +47,13 @@ change3:
 
 XServerDisplayActivity.java:
 
+change1:
+
+        final File rootDir = imageFs.getRootDir();
+        final File prootDir = new File(activity.getFilesDir(), "proot-android");
+
+change2:
+
             if (success) {
                 imageFs.createImgVersionFile(LATEST_VERSION);
                 resetContainerImgVersions(activity);
